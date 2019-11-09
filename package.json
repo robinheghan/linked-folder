@@ -1,0 +1,23 @@
+{
+  "name": "linked-folder",
+  "version": "1.0.0",
+  "description": "Simple utility for making symbolic links into a source directory from a template directory.",
+  "main": "index.js",
+  "bin": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skinney/linked-folder.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin Heggelund Hansen",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Skinney/linked-folder/issues"
+  },
+  "homepage": "https://github.com/Skinney/linked-folder#readme",
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
