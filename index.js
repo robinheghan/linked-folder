@@ -3,6 +3,7 @@
 const process = require('process');
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
 
 const time = new Date();
 const args = process.argv.slice(2);
@@ -36,9 +37,10 @@ if (fs.existsSync(linkTo)) {
     fs.unlinkSync(linkTo);
 }
 
-fs.symlinkSync(linkFrom, linkTo);
-touchFilesInDir(linkFrom);
+const linkType = os.type() === 'Windows_NT' ? 'junction' : 'dir';
 
+fs.symlinkSync(linkFrom, linkTo, linkType);
+touchFilesInDir(linkFrom);
 
 function touchFilesInDir(dir) {
     const dirContents = fs.readdirSync(dir);
