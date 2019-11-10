@@ -1,6 +1,6 @@
 {
   "name": "linked-folder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple utility for making symbolic links into a source directory from a template directory.",
   "main": "index.js",
   "bin": "index.js",
